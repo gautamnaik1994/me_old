@@ -1,15 +1,340 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gautam Naik</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genora Infotech</title>
+  <link rel="stylesheet" href="assets/css/app.css">
 </head>
 
 <body>
-    Hello World Inside public again
+  <div id="siteContainer">
+     <style type="text/css">
+     div#loader{opacity:1;transition:opacity 1s}div#loader.l-fade{opacity:0}.loader-parent{position:fixed;display:-webkit-flex;display:-ms-flexbox;display:flex;height:100%;width:100%;background-color:#03A9F4;z-index:900;-webkit-align-items:center;-ms-flex-align:center;align-items:center;top:0;bottom:0;left:0;right:0;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.loader{width:40px;height:40px;border:4px
+     solid #Fff;-webkit-animation:loader 2s infinite ease;animation:loader 2s infinite ease}.loader-inner{vertical-align:top;display:inline-block;width:100%;background-color:#fff;-webkit-animation:loader-inner
+     2s infinite ease-in;animation:loader-inner 2s infinite ease-in}@-webkit-keyframes loader{0%{-webkit-transform:rotate(0);transform:rotate(0)}25%,50%{-webkit-transform:rotate(180deg);transform:rotate(180deg)}100%,75%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes
+     loader{0%{-webkit-transform:rotate(0);transform:rotate(0)}25%,50%{-webkit-transform:rotate(180deg);transform:rotate(180deg)}100%,75%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes
+     loader-inner{0%,100%,25%{height:0%}50%,75%{height:100%}}@keyframes loader-inner{0%,100%,25%{height:0%}50%,75%{height:100%}}
+     </style>
+     <div class="loader-parent" id="loader">
+         <span class="loader">
+             <span class="loader-inner"></span>
+         </span>
+     </div>
+     <script type="text/javascript">
+         window.onload = function () {
+             var element = document.getElementById("loader");
+             element.className = element.className ? '' : 'l-fade';
+             element.outerHTML = ""; delete element;
+         };
+     </script>
+    <div id="siteNavStickyContainer" data-sticky-container style="">
+        <div id="siteNavStickyWrap" class="sticky" data-sticky data-sticky-on="small" data-anchor="siteContainer" data-margin-top="0">
+            <div class="top-black-bar text-right">
+                CONTACT-US:+91 750 765 1099, +91 904 997 2789
+            </div>
+            <div id="siteNavToggler" class="title-bar" data-responsive-toggle="siteNav" data-hide-for="medium">
+                <div class="top-bar-title">
+                    <img id="" src="assets/img/logo_gen_h.svg" alt="Genora logo">
+                </div>
+                <div>
+                    <svg preserveAspectRatio: "none" height="70" width="70" id="menu-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 200 200">
+        <line id="f_line" class="cls-1" x1="63.4" y1="78.4" x2="136.6" y2="78.4" />
+    
+        <line id="t_line" class="cls-1" x1="63.4" y1="121.6" x2="136.6" y2="121.6" />
+        <path id="c_path" class="cls-1 cpath-ini" d="M63.4,100h73.3s50.2,1,11.2-47.8a67.7,67.7,0,1,0,0,95.7,67.7,67.7,0,0,0,0-95.7"
+        />
+        </svg>
+                </div>
+            </div>
+            <div id="siteNav" class="top-bar top-bar-before">
+                <div class="top-bar-title">
+                    <img id="logoImage" src="assets/img/logo_gen.svg" alt="Genora logo">
+                </div>
+                <div class="nav-container">
+                    <div class="row  align-center height100">
+                        <div class="column "></div>
+                        <!--<div class="column small-12 medium-12 large-7">
+                            <ul class="dropdown menu expanded align-center header-dropdown" data-dropdown-menu data-click-open="true" data-closing-time="50">
+                                <li>
+                                    <a href="#" class="header-dropdown-title">WHO WE ARE</a>
+                                    <ul class="menu header-dropdown-menu ">
+                                        <li><a href="#">Our Journey</a></li>
+                                        <li><a href="#">Our Vision</a></li>
+                                        <li><a href="#">Reach Us</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="header-dropdown-title">WHAT WE DO</a>
+                                    <ul class="menu header-dropdown-menu">
+                                        <li><a href="#">Mobile Apps Development</a></li>
+                                        <li><a href="#">Offshore IT Setup</a></li>
+                                        <li><a href="#">Software Application Development</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="header-dropdown-title">CAREER</a></li>
+                            </ul>
+                        </div>-->
+                        <div class="column small-12 medium-12 large-7">
+                            <ul class="custom-dropdown">
+                                <li class="c-dropdown">
+                                    <a href="#" class="header-dropdown-title">WHO WE ARE</a>
+                                    <ul class="c-sub-menu">
+                                        <li><a href="#">Our Journey</a></li>
+                                        <li><a href="#">Our Vision</a></li>
+                                        <li><a href="#">Reach Us</a></li>
+                                    </ul>
+                                </li>
+                                <li class="c-dropdown">
+                                    <a href="#" class="header-dropdown-title">WHAT WE DO</a>
+                                    <ul class="c-sub-menu big">
+                                        <li><a href="#">Mobile Apps Development</a></li>
+                                        <li><a href="#">Offshore IT Setup</a></li>
+                                        <li><a href="#">Software Application Development</a></li>
+                                    </ul>
+                                </li>
+                                <li class="c-dropdown">
+                                    <a href="#" class="header-dropdown-title">CAREER</a>
+                                    
+                                
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column "></div>
+                    </div>
+                </div>
+                <div class="flex-center">
+                    <a href="#features" class="button request-quote">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="row expanded">  
+    
+    
+    </div>-->
+    <div class="row expanded">
+      <div id="topCarousel" class="owl-carousel">
+        <div><img src="assets/img/banner01.png" alt=""> </div>
+        <div><img src="assets/img/banner02.png" alt=""> </div>
+        <div><img src="assets/img/banner03.png" alt=""> </div>
+        <div><img src="assets/img/banner04.png" alt=""> </div>
+        <div><img src="assets/img/banner05.png" alt=""> </div>
+      </div>
+    </div>
+    <div class="home-top-container">
+      <div class="row ">
+        <h2 class="primary-text-color"> <small>at&nbsp;</small>GENORA INFOTECH</h2>
+        <h5 class=""><q> We design and develop finest quality mobile Apps on MEAN stack to sustain operations for multimillion downloads. And
+          we know a bit about business plans, startup investor pitch, app store optimization and market research </q>
+        </h5>
+      </div>
+    </div>
+    <div class="tworemmt">
+      <!--<div class="section-header">
+        <h5 class="title">WHAT WE OFFER</h5>
+      </div>-->
+      <div class="row align-center">
+        <div class="columns  small-12 medium-4 services-home wow fadeInUp">
+          <div class="row mobile">
+            <div class="columns small-4 medium-12">
+              <div class="text-center">
+                <img src="assets/img/mobile_n.svg" alt=" Mobile Apps Development">
+              </div>
+            </div>
+            <div class="columns small-8 medium-12">
+              <h4 class="medium-text-center title">
+                Mobile Apps Development
+              </h4>
+              <p class="medium-text-center"> Our capabilities span multiple platforms and technologies aimed at creating meaningful engagement, thus ensuring
+                a compelling mobile experience
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="columns  small-12 medium-4 services-home wow fadeInUp" data-wow-delay="0.2s">
+          <div class="row offshore">
+            <div class="columns small-4 medium-12">
+              <div class="text-center">
+                <img src="assets/img/offshore_n.svg" alt=" Offshore IT Setup">
+              </div>
+            </div>
+            <div class="columns small-8 medium-12">
+              <h4 class="medium-text-center title">
+                Offshore IT Setup
+              </h4>
+              <p class="medium-text-center"> Genora infotech provides dedicated resources that act as a seamless extension of your company’s Product/Application
+                development.
+              </p>
+            </div>
+          </div>
+    
+        </div>
+        <div class="columns  small-12 medium-4 services-home wow fadeInUp" data-wow-delay="0.3s">
+          <div class="row web">
+            <div class="columns small-4 medium-12">
+              <div class="text-center">
+                <img src="assets/img/earth_n.svg" alt=" Software Application Development">
+              </div>
+            </div>
+            <div class="columns small-8 medium-12">
+              <h4 class="medium-text-center title">
+                Web Development
+              </h4>
+              <p class="medium-text-center"> We thoughtfully design our web solutions to deliver user-friendly, intuitive experiences to streamline and operate
+                cumbersome processes with ease.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-header">
+      <h5 class="title"><span>OUR PORTFOLIO</span></h5>
+    </div>
+    <div class="portfolio-bg tworemmt">
+    
+      <div class="row expanded tworemmt">
+        <div id="portfolioCarousel" class="owl-carousel owl-theme">
+          <div><img src="assets/img/banner01.png" alt=""> </div>
+          <div><img src="assets/img/banner02.png" alt=""> </div>
+          <div><img src="assets/img/banner03.png" alt=""> </div>
+          <div><img src="assets/img/banner04.png" alt=""> </div>
+          <div><img src="assets/img/banner05.png" alt=""> </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="fourremmt">
+     <div class="section-header">
+      <h5 class="title"><span>WHAT WE DO</span></h5>
+    </div>
+      <div class="column row align-middle what-we-do">
+        <div class="columns medium-8">
+          <h3 class="title"> Working with Agencies</h3>
+          <p>Smart agencies look for smarter people for their development work. With Genora, it’s like setting up your own Offshore
+            Development Center. You get access to world-class capability; you de-risks your business; substantially reduce your
+            overheads; and focus on your core, while Genora delivers on its core, i.e. app development. Transparent in our dealings,
+            we will also counsel you on whether you should opt for the ODS mode, or use our help to built your in-house capability.</p>
+        </div>
+        <div class="columns medium-4 text-center">
+          <img src="assets/img/workingwithagencies.svg" alt="">
+    
+        </div>
+      </div>
+      <div class="column row align-middle what-we-do">
+        <div class="columns medium-4 text-center">
+          <img src="assets/img/startups.svg" alt="">
+        </div>
+        <div class="columns medium-8">
+          <h3 class="title">Apps Development for StartUps</h3>
+          <p>We provide a slew of tailored services to startups and small and medium-scale entrepreneurs, such as prototype app
+            development, wireframe designing, SRS Documentation, UX designing, to cite a few. Should you be interested in this
+            service, with prototypes on paper, our Business Associate would be able to explain all the app features to you, do
+            feasibility and market viability studies on your under development business app. Wireframing enables us to define
+            the information hierarchy of your design, making it easier for you to visualize the layout of your web property and
+            how you want your user to process the information. Likewise, if you already have a website, we can enhance its functionality
+            and aesthetics for user experience (UX designing).</p>
+        </div>
+    
+      </div>
+      <div class="column row  align-middle what-we-do">
+        <div class="columns medium-8">
+          <h3 class="title"> Enterprise Applications</h3>
+          <p>Smart agencies look for smarter people for their development work. With Genora, it’s like setting up your own Offshore
+            Development Center. You get access to world-class capability; you de-risks your business; substantially reduce your
+            overheads; and focus on your core, while Genora delivers on its core, i.e. app development. Transparent in our dealings,
+            we will also counsel you on whether you should opt for the ODS mode, or use our help to built your in-house capability.</p>
+        </div>
+        <div class="columns medium-4 text-center">
+          <img src="assets/img/enterpriseapps.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="tworemmt">
+      <div class="section-header">
+        <h5 class="title">PROCESS</h5>
+      </div>
+    
+    </div>
+    <div class="tworemmt">
+      <div class="section-header">
+        <h5 class="title">AWARDS</h5>
+      </div>
+      <div class="row">
+        <div class="columns small-12 medium-3 text-center"><img src="assets/img/awa1.png" alt=""> </div>
+        <div class="columns small-12 medium-3 text-center"><img src="assets/img/awa2.png" alt=""></div>
+        <div class="columns small-12 medium-3 text-center"><img src="assets/img/awa3.png" alt=""></div>
+        <div class="columns small-12 medium-3 text-center"><img src="assets/img/awa4.png" alt=""></div>
+      </div>
+    </div>
+    
+    <div class="fourremmt">
+      <div class="section-header">
+        <h5 class="title">CLIENTS</h5>
+      </div>
+      <div class="row">
+        <div class=" row columns small-12 medium-6">
+          <div class="columns small-6 medium-3 text-center"> <img src="assets/img/goachamber_logo.png" alt=""> </div>
+          <div class="columns small-6 medium-3 text-center"><img src="assets/img/bjp_logo.png" alt=""></div>
+          <div class="columns small-6 medium-3 text-center"><img src="assets/img/cognitive.png" alt=""></div>
+          <div class="columns small-6 medium-3 text-center"><img src="assets/img/Persistent_logo.png" alt=""></div>
+        </div>
+        <div class=" row columns small-12 medium-6">
+          <div class="columns small-6 medium-3 text-center"> <img src="assets/img/tevendo.png" alt=""> </div>
+          <div class="columns small-6 medium-3 text-center"><img src="assets/img/vubit.png" alt=""></div>
+          <div class="columns small-6 medium-3 text-center"><img src="assets/img/WNC_Logo_LR.png" alt=""></div>
+          <div class="columns small-6 medium-3 text-center"><img src="assets/img/zuari_advent_logo.png" alt=""></div>
+        </div>
+    
+      </div>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="columns small-12 medium-4 footer-form">
+                <h4 class="title">REQUEST A QUOTE</h4>
+                <form>
+                    <div class="row">
+                        <div class="small-12 columns input-col ">
+                            <label>Name
+                            <input type="text" >
+                            </label>
+                        </div>
+                        <div class="small-12 columns input-col">
+                            <label>Country
+                                <input type="text" >
+                            </label>
+                        </div>
+                        <div class="small-12 columns input-col">
+                            <label>Email
+                            <input type="text" >
+                            </label>
+                        </div>
+                        <div class="small-12 columns input-col">
+                            <label>Phone
+                            <input type="text" >
+                            </label>
+                        </div>
+                        <div class="small-12 columns input-col">
+                            <label>I want to develop..
+                                <textarea row="20"></textarea>
+                            </label>
+                        </div>
+                        <div class="small-12 columns input-col">
+                            <button type="button" class="primary button expanded">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+    </footer>
+  </div>
+
+  <script src="assets/js/app.js"></script>
 </body>
 
 </html>
