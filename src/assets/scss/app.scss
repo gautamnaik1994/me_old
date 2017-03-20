@@ -6,71 +6,209 @@
     //@include foundation-grid;
     @include foundation-flex-grid;
     @include foundation-typography;
-    @include foundation-button;
-   // @include foundation-forms;
-    // @include foundation-range-input;
-    //@include foundation-accordion;
+    //@include foundation-button;
+    //@include foundation-forms;
+   // @include foundation-range-input;
+   // @include foundation-accordion;
     //@include foundation-accordion-menu;
     //@include foundation-badge;
-    // @include foundation-breadcrumbs;
+    //@include foundation-breadcrumbs;
    // @include foundation-button-group;
     //@include foundation-callout;
     //@include foundation-card;
     @include foundation-close-button;
-    @include foundation-menu;
-    // @include foundation-menu-icon;
-    // @include foundation-drilldown-menu;
+   // @include foundation-menu;
+   // @include foundation-menu-icon;
+   // @include foundation-drilldown-menu;
     //@include foundation-dropdown;
     //@include foundation-dropdown-menu;
     //@include foundation-responsive-embed;
-    //@include foundation-label;
-    // @include foundation-media-object;
-    // @include foundation-off-canvas;
-    // @include foundation-orbit;
-    // @include foundation-pagination;
-    // @include foundation-progress-bar;
-    // @include foundation-progress-element;
-    // @include foundation-meter-element;
-    // @include foundation-slider;
-    @include foundation-sticky;
+   // @include foundation-label;
+   // @include foundation-media-object;
+    //@include foundation-off-canvas;
+   // @include foundation-orbit;
+   // @include foundation-pagination;
+   // @include foundation-progress-bar;
+   // @include foundation-progress-element;
+   // @include foundation-meter-element;
+    //@include foundation-slider;
+    //@include foundation-sticky;
     @include foundation-reveal;
-    // @include foundation-switch;
-    // @include foundation-table;
+    //@include foundation-switch;
+    //@include foundation-table;
     //@include foundation-tabs;
-    // @include foundation-thumbnail;
-    @include foundation-title-bar;
-    // @include foundation-tooltip;
-    @include foundation-top-bar;
+    //@include foundation-thumbnail;
+    //@include foundation-title-bar;
+    //@include foundation-tooltip;
+   // @include foundation-top-bar;
     @include foundation-visibility-classes;
     @include foundation-float-classes;
     @include foundation-flex-classes;
    // @include motion-ui-transitions;
     //@include motion-ui-animations;
-
     // @import 'components/helpers';
     // @import 'components/menuicon';
     // @import 'components/owl.carousel';
     // @import 'components/owl.theme.default';
     // @import 'components/animate';
-
     //font: Josefin Sans,QuckSand
-    #siteContainer {
+    // #siteContainer {
+    //     position: relative;
+    // }
+    // #siteNavStickyWrap {
+    //     width: 100%;
+    //     max-width: 100%;
+    // }
+    // #siteNavStickyContainer {
+    //     position: absolute;
+    //     left: 0;
+    //     right: 0;
+    //     width: 100%;
+    //     @include breakpoint(small only) {
+    //         position: relative;
+    //     }
+    // }
+    body {
+      height: 2000px;
+    }
+    
+    .top-container {
+      display: flex;
+      //flex-direction: column;
+      // justify-content: space-between;
+      height: 100vh;
+      position: relative;
+      // background: url("../img/testbanner.jpg") no-repeat;
+      //background-size: cover;
+      background-color: slategray;
+      background-image: radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+      background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+      background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    }
+    .initial-nav {
+      $dcolor: #00bcd4;
+      $lcolor: #4dd0e1;
+      $underlineheight: 3px;
+      $texcolor: white;
+      // align-self: flex-start;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      ol,
+      ul {
+        list-style: none;
+        margin-bottom: 0;
+        text-align: right;
+        overflow: hidden;
+        margin: 0 2rem;
+      }
+      li {
+        // display: inline-block;
+        padding: 20px 0 20px;
+        float: right;
+      }
+      a {
+        text-decoration: none;
         position: relative;
-    }
-    
-    #siteNavStickyWrap {
-        width: 100%;
-        max-width: 100%;
-    }
-    
-    #siteNavStickyContainer {
-        position: absolute;
-        left: 0;
-        right: 0;
-        width: 100%;
-        @include breakpoint(small only) {
-            position: relative;
+        display: block;
+        padding: 16px 0;
+        margin: 0 12px;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        transition: color 0.1s, background-color 0.1s;
+        color: $texcolor;
+        &:hover {
+          color: $lcolor;
         }
+        &:focus,
+        &:active {
+          color: $dcolor;
+        }
+      }
+      a::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100%;
+        height: $underlineheight;
+        width: 100%;
+        background-color: $dcolor;
+        transform-origin: center top;
+        transform: scale(0, 1);
+        transition: color 0.1s, transform 0.2s ease-out;
+      }
+      a:active::before {
+        background-color: $dcolor;
+      }
+      a:hover::before,
+      a:focus::before {
+        transform-origin: center top;
+        transform: scale(1, 1);
+      }
     }
-
+    $namebordercolor:white;
+    .my-name-main {
+      align-self: center;
+      text-align: center;
+      width: 100%;
+      .parent {
+        border: 1px solid $namebordercolor;
+        padding: 0;
+      }
+      .name {
+        margin: 0;
+        padding: 1rem 0;
+        border-bottom:1px solid $namebordercolor;
+      }
+      .desig {
+        margin: 0;
+          padding: 1rem 0;
+      }
+    }
     
+    .down-arrow {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: red;
+    }
+    
+    .shimmer {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.1);
+      background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+      background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+      background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+      -webkit-background-size: 125px 100%;
+      -moz-background-size: 125px 100%;
+      background-size: 125px 100%;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      -webkit-animation-name: shimmer;
+      -moz-animation-name: shimmer;
+      animation-name: shimmer;
+      -webkit-animation-duration: 4s;
+      -moz-animation-duration: 4s;
+      animation-duration: 4s;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-color: #222;
+    }
+    
+    @keyframes shimmer {
+      0% {
+        background-position: top left;
+      }
+      50% {}
+      100% {
+        background-position: top right;
+      }
+    }

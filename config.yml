@@ -50,7 +50,7 @@ PATHS:
    # - "node_modules/foundation-sites/js/foundation.orbit.js"
     #- "node_modules/foundation-sites/js/foundation.responsiveMenu.js"
     - "node_modules/foundation-sites/js/foundation.responsiveToggle.js"
-    - "node_modules/foundation-sites/js/foundation.reveal.js"
+    #- "node_modules/foundation-sites/js/foundation.reveal.js"
    # - "node_modules/foundation-sites/js/foundation.slider.js"
     - "node_modules/foundation-sites/js/foundation.sticky.js"
    # - "node_modules/foundation-sites/js/foundation.tabs.js"
