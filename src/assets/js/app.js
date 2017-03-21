@@ -16,7 +16,7 @@
 
 
 $(document).foundation();
-new WOW().init();
+//new WOW().init();
 // var logoSquare = new Image()
 // logoSquare.src = "assets/img/logo_gen_h.svg";
 // var logoRect = new Image()

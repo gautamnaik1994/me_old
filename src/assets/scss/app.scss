@@ -2,35 +2,36 @@
     @import 'settings';
     @import 'foundation';
     @import 'motion-ui';
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Petit+Formal+Script|Space+Mono');
     @include foundation-global-styles;
     //@include foundation-grid;
     @include foundation-flex-grid;
     @include foundation-typography;
     //@include foundation-button;
     //@include foundation-forms;
-   // @include foundation-range-input;
-   // @include foundation-accordion;
+    // @include foundation-range-input;
+    // @include foundation-accordion;
     //@include foundation-accordion-menu;
     //@include foundation-badge;
     //@include foundation-breadcrumbs;
-   // @include foundation-button-group;
+    // @include foundation-button-group;
     //@include foundation-callout;
     //@include foundation-card;
     @include foundation-close-button;
-   // @include foundation-menu;
-   // @include foundation-menu-icon;
-   // @include foundation-drilldown-menu;
+    // @include foundation-menu;
+    // @include foundation-menu-icon;
+    // @include foundation-drilldown-menu;
     //@include foundation-dropdown;
     //@include foundation-dropdown-menu;
     //@include foundation-responsive-embed;
-   // @include foundation-label;
-   // @include foundation-media-object;
+    // @include foundation-label;
+    // @include foundation-media-object;
     //@include foundation-off-canvas;
-   // @include foundation-orbit;
-   // @include foundation-pagination;
-   // @include foundation-progress-bar;
-   // @include foundation-progress-element;
-   // @include foundation-meter-element;
+    // @include foundation-orbit;
+    // @include foundation-pagination;
+    // @include foundation-progress-bar;
+    // @include foundation-progress-element;
+    // @include foundation-meter-element;
     //@include foundation-slider;
     //@include foundation-sticky;
     @include foundation-reveal;
@@ -40,13 +41,13 @@
     //@include foundation-thumbnail;
     //@include foundation-title-bar;
     //@include foundation-tooltip;
-   // @include foundation-top-bar;
+    // @include foundation-top-bar;
     @include foundation-visibility-classes;
     @include foundation-float-classes;
     @include foundation-flex-classes;
-   // @include motion-ui-transitions;
+    // @include motion-ui-transitions;
     //@include motion-ui-animations;
-     @import 'components/helpers';
+    @import 'components/helpers';
     // @import 'components/menuicon';
     // @import 'components/owl.carousel';
     // @import 'components/owl.theme.default';
@@ -78,20 +79,31 @@
       // justify-content: space-between;
       height: 100vh;
       position: relative;
-      // background: url("../img/testbanner.jpg") no-repeat;
-      //background-size: cover;
-      background-color: black;
-      background-image: radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
-      background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-      background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+      background: url("../img/spaceback1.jpg") no-repeat;
+      background-size: cover;
+      &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left:0;
+        right:0;
+        background-color: transparentize(black, 0.5) ;
+      }
+      // background-color: black;
+      // background-image: radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+      // background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+      // background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     }
-    .mylogotop{
+    
+    .mylogotop {
       padding: 0!important;
-      img{
+      img {
         width: 100px;
         height: auto;
       }
     }
+    
     .initial-nav {
       $dcolor: #00bcd4;
       $lcolor: #4dd0e1;
@@ -155,11 +167,14 @@
         transform: scale(1, 1);
       }
     }
+    
     $namebordercolor:white;
     .my-name-main {
+      z-index: 2;
       align-self: center;
       text-align: center;
       width: 100%;
+      color: white;
       .parent {
         border: 1px solid $namebordercolor;
         padding: 0;
@@ -167,18 +182,27 @@
       .name {
         margin: 0;
         padding: 1rem 0;
-        border-bottom:1px solid $namebordercolor;
+        border-bottom: 1px solid $namebordercolor;
+        font-family: 'Open Sans','Helvetica',sans-serif;
+        font-weight: 300;
       }
-      .desig,.dev {
+      .desig,
+      .dev {
         margin: 0;
         padding: 1rem 0;
       }
-      .desig{
-        border-right: 1px solid $namebordercolor;
-         background-color:lawngreen;
+      .desig {
+        // border-right: 1px solid $namebordercolor;
+        background-color: #e91e63;
+        h5 {
+          font-family: 'Petit Formal Script', cursive;
+        }
       }
-      .dev{
-        background-color:lawngreen;
+      .dev {
+        background-color: #9e9e9e;
+        h5 {
+          font-family: 'Space Mono', monospace;
+        }
       }
     }
     
@@ -206,7 +230,6 @@
       -webkit-animation-name: shimmer;
       -moz-animation-name: shimmer;
       animation-name: shimmer;
-      
       animation-duration: 2s;
       -webkit-animation-iteration-count: infinite;
       -moz-animation-iteration-count: infinite;
