@@ -46,7 +46,7 @@
     @include foundation-flex-classes;
    // @include motion-ui-transitions;
     //@include motion-ui-animations;
-    // @import 'components/helpers';
+     @import 'components/helpers';
     // @import 'components/menuicon';
     // @import 'components/owl.carousel';
     // @import 'components/owl.theme.default';
@@ -80,10 +80,17 @@
       position: relative;
       // background: url("../img/testbanner.jpg") no-repeat;
       //background-size: cover;
-      background-color: slategray;
+      background-color: black;
       background-image: radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
       background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
       background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    }
+    .mylogotop{
+      padding: 0!important;
+      img{
+        width: 100px;
+        height: auto;
+      }
     }
     .initial-nav {
       $dcolor: #00bcd4;
@@ -162,9 +169,16 @@
         padding: 1rem 0;
         border-bottom:1px solid $namebordercolor;
       }
-      .desig {
+      .desig,.dev {
         margin: 0;
-          padding: 1rem 0;
+        padding: 1rem 0;
+      }
+      .desig{
+        border-right: 1px solid $namebordercolor;
+         background-color:lawngreen;
+      }
+      .dev{
+        background-color:lawngreen;
       }
     }
     
@@ -192,9 +206,8 @@
       -webkit-animation-name: shimmer;
       -moz-animation-name: shimmer;
       animation-name: shimmer;
-      -webkit-animation-duration: 4s;
-      -moz-animation-duration: 4s;
-      animation-duration: 4s;
+      
+      animation-duration: 2s;
       -webkit-animation-iteration-count: infinite;
       -moz-animation-iteration-count: infinite;
       animation-iteration-count: infinite;
