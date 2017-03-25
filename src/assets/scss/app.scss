@@ -196,7 +196,13 @@
         background-color: #03a9f4;
         h5 {
           font-family: 'Petit Formal Script', cursive;
+<<<<<<< HEAD
           animation: designAnim 4s linear infinite;
+=======
+           animation: designAnim 4s linear infinite;
+		    animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+>>>>>>> 4769dfefb85c394b49346d1b96d7993d601f76fb
         }
       }
       .dev {
@@ -214,6 +220,7 @@
     }
     
     @keyframes designAnim {
+<<<<<<< HEAD
       0% {
         transform: scale(1, 1);
       }
@@ -229,6 +236,41 @@
       100% {
         transform: scale(1, 1);
       }
+=======
+        0% {
+    transform:  translate(0px,0px)  scaleX(1.00) scaleY(1.00) ;
+  }
+  10% {
+    transform:  translate(2px,1px)  scaleX(2.00) scaleY(1.00) ;
+  }
+  20% {
+    transform:  translate(3px,3px)  scaleX(1.00) scaleY(1.00) ;
+  }
+  30% {
+    transform:  translate(5px,4px)  scaleX(1.28) scaleY(1.28) ;
+  }
+  40% {
+    transform:  translate(6px,5px)  scaleX(1.00) scaleY(1.28) ;
+  }
+  50% {
+    transform:  translate(7px,7px)  scaleY(1.00) ;
+  }
+  60% {
+    transform:  translate(9px,8px)  scaleX(-1.00) ;
+  }
+  70% {
+    transform:  translate(10px,9px)  scaleX(1.00) ;
+  }
+  80% {
+    transform:  translate(12px,11px)  ;
+  }
+  90% {
+    transform:  translate(12px,12px)  ;
+  }
+  100% {
+    transform:  translate(0px,0px)  scaleX(1.00) scaleY(1.00) ;
+  }
+>>>>>>> 4769dfefb85c394b49346d1b96d7993d601f76fb
     }
     
     @keyframes caretPulsate {
