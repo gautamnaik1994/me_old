@@ -7,7 +7,7 @@
 //@include foundation-grid;
 @include foundation-flex-grid;
 @include foundation-typography;
-//@include foundation-button;
+@include foundation-button;
 //@include foundation-forms;
 // @include foundation-range-input;
 // @include foundation-accordion;
@@ -31,8 +31,7 @@
 // @include foundation-pagination;
 // @include foundation-progress-bar;
 // @include foundation-progress-element;
- //@include foundation-meter-element;
-
+//@include foundation-meter-element;
 //@include foundation-slider;
 //@include foundation-sticky;
 @include foundation-reveal;
@@ -49,6 +48,7 @@
 // @include motion-ui-transitions;
 //@include motion-ui-animations;
 @import 'components/helpers';
+@import 'components/mixins';
 // @import 'components/menuicon';
 // @import 'components/owl.carousel';
 // @import 'components/owl.theme.default';
@@ -76,8 +76,7 @@ body {
 }
 
 .top-container {
-  display: flex;
-  //flex-direction: column;
+  display: flex; //flex-direction: column;
   // justify-content: space-between;
   height: 100vh;
   position: relative;
@@ -92,8 +91,7 @@ body {
     left: 0;
     right: 0;
     background-color: transparentize(black, 0.3);
-  }
-  // background-color: black;
+  } // background-color: black;
   // background-image: radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
   // background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
   // background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
@@ -111,8 +109,7 @@ body {
   $dcolor: #00bcd4;
   $lcolor: #4dd0e1;
   $underlineheight: 3px;
-  $texcolor: white;
-  // align-self: flex-start;
+  $texcolor: white; // align-self: flex-start;
   width: 100%;
   position: absolute;
   top: 0;
@@ -184,8 +181,7 @@ $namebordercolor:white;
   }
   .name {
     margin: 0;
-    padding: 1rem 0;
-    //   border-bottom: 1px solid $namebordercolor;
+    padding: 1rem 0; //   border-bottom: 1px solid $namebordercolor;
     font-family: 'Open Sans', 'Helvetica', sans-serif;
     font-weight: 300;
   }
@@ -394,25 +390,51 @@ $namebordercolor:white;
 
 .aboutme {
   padding-top: 4rem;
-  .mylogo-aboutme {
-    height: 150px;
-    width: auto;
-    margin: 1rem auto;
-  }
   .content {
     font-weight: $glightfontweight;
-  }
-}
-.header{
-  margin: 0rem auto;
-  text-align: center;
-  & +hr{
-        margin: 1rem auto 2rem;
-    width: 7rem;
-    height: 10px;
-    border: 0px;
-    background-color: #03A9F4;
-    border-radius: 10px;
+    font-family: 'Droid Serif', serif;
+    color: #484848;
   }
 }
 
+$circledimens:18px;
+$hrheight:9px;
+.header {
+  margin: 0rem auto;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  &+hr {
+    position: relative;
+    margin: 1rem auto 2rem;
+    width: 7rem;
+    height: $hrheight;
+    border: 0px;
+    background-color: #03A9F4;
+    border-radius: 10px;
+    &:after {
+      content: '';
+      position: absolute; // @include posattribs(0,50%,0,50%);
+      @include widthheight($circledimens,
+      $circledimens);
+      transform-origin: center center;
+      background-color: inherit;
+      border-radius: 10px;
+      transform: translate( calc(3.5rem - #{$circledimens/2}),
+      -4px);
+    }
+  }
+}
+
+.download-cv {
+  margin-top: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  padding: 0.9rem 2rem;
+  transition: all 0.2s ease-in;
+  background-color: #03a9f4;
+  &:hover {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.63);
+    background-color: darken(#03a9f4, 5);
+  }
+}

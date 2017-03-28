@@ -1,0 +1,10 @@
+@mixin posattribs($top:auto,$left:auto,$bottom:auto,$right:auto){
+    top:$top;
+    left: $left;
+    bottom: $bottom;
+    right:$right;
+}
+@mixin widthheight($width:auto,$height:auto){
+   width: $width;
+   height: $height;
+}

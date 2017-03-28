@@ -1,14 +1,14 @@
 'use strict';
 
-import plugins  from 'gulp-load-plugins';
-import yargs    from 'yargs';
-import browser  from 'browser-sync';
-import gulp     from 'gulp';
-import panini   from 'panini';
-import rimraf   from 'rimraf';
+import plugins from 'gulp-load-plugins';
+import yargs from 'yargs';
+import browser from 'browser-sync';
+import gulp from 'gulp';
+import panini from 'panini';
+import rimraf from 'rimraf';
 //import sherpa   from 'style-sherpa';
-import yaml     from 'js-yaml';
-import fs       from 'fs';
+import yaml from 'js-yaml';
+import fs from 'fs';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -17,7 +17,12 @@ const $ = plugins();
 const PRODUCTION = !!(yargs.argv.production);
 
 // Load settings from settings.yml
-const { COMPATIBILITY, PORT, UNCSS_OPTIONS, PATHS } = loadConfig();
+const {
+  COMPATIBILITY,
+  PORT,
+  UNCSS_OPTIONS,
+  PATHS
+} = loadConfig();
 
 function loadConfig() {
   let ymlFile = fs.readFileSync('config.yml', 'utf8');
@@ -26,7 +31,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy)));
+  gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy)));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -78,8 +83,8 @@ function sass() {
   return gulp.src('src/assets/scss/app.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
-      includePaths: PATHS.sass
-    })
+        includePaths: PATHS.sass
+      })
       .on('error', $.sass.logError))
     .pipe($.autoprefixer({
       browsers: COMPATIBILITY
@@ -89,7 +94,9 @@ function sass() {
     .pipe($.if(PRODUCTION, $.cssnano()))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
-    .pipe(browser.reload({ stream: true }));
+    .pipe(browser.reload({
+      stream: true
+    }));
 }
 
 // Combine JavaScript into one file
@@ -97,10 +104,19 @@ function sass() {
 function javascript() {
   return gulp.src(PATHS.javascript)
     .pipe($.sourcemaps.init())
-    .pipe($.babel({ignore: ['what-input.js']}))
+    .pipe($.babel({
+      ignore: ['what-input.js','raphael.js'],
+      presets: [
+        ['es2015', {
+          modules: false
+        }]
+      ]
+    }))
     .pipe($.concat('app.js'))
     .pipe($.if(PRODUCTION, $.uglify()
-      .on('error', e => { console.log(e); })
+      .on('error', e => {
+        console.log(e);
+      })
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/js'));
@@ -119,7 +135,8 @@ function images() {
 // Start a server with BrowserSync to preview the site in
 function server(done) {
   browser.init({
-    server: PATHS.dist, port: PORT
+    server: PATHS.dist,
+    port: PORT
   });
   done();
 }

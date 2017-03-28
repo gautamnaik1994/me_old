@@ -17,9 +17,33 @@
 
 $(document).foundation();
 //new WOW().init();
-$(function() {
-	$('a[href*=#]').on('click', function(e) {
+$(function () {
+	$('a[href*=#]').on('click', function (e) {
 		e.preventDefault();
-		$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+		$('html, body').animate({
+			scrollTop: $($(this).attr('href')).offset().top
+		}, 500, 'linear');
+	});
+});
+document.addEventListener("DOMContentLoaded", function (event) {
+
+	var dflt = {
+		min: 0,
+		max: 200,
+		donut: true,
+		gaugeWidthScale: 0.6,
+		counter: true,
+		hideInnerShadow: true
+	}
+	var gg1 = new JustGage({
+		id: 'gg1',
+		value: 125,
+		title: 'javascript call',
+		defaults: dflt
+	});
+	var gg2 = new JustGage({
+		id: 'gg2',
+		title: 'data-attributes',
+		defaults: dflt
 	});
 });

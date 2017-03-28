@@ -29,6 +29,8 @@ PATHS:
     - "node_modules/motion-ui/src"
   # Paths to JavaScript libraries, which are combined into one file
   javascript:
+    - "other/js/raphael.js"
+    - "other/js/justgage.js"
     # Libraries required by Foundation
     - "node_modules/foundation-sites/vendor/jquery/dist/jquery.js"
     - "node_modules/what-input/dist/what-input.js"
@@ -58,5 +60,6 @@ PATHS:
    # - "node_modules/foundation-sites/js/foundation.tooltip.js"
    #- "node_modules/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
     # Paths to your own project code are here
+   
     - "src/assets/js/!(app).js"
     - "src/assets/js/app.js"
