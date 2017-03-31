@@ -2,7 +2,8 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Petit+Formal+Script|Space+Mono');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Slabo+27px|Pacifico');
+
 @include foundation-global-styles;
 //@include foundation-grid;
 @include foundation-flex-grid;
@@ -71,6 +72,12 @@
 //     }
 // }
 $glightfontweight:300;
+$cursivefont:'Pacifico';
+$contentfont:'Slabo 27px';
+
+
+
+
 body {
   height: 2000px;
 }
@@ -194,7 +201,7 @@ $namebordercolor:white;
     // border-right: 1px solid $namebordercolor;
     background-color: #03a9f4;
     h5 {
-      font-family: 'Petit Formal Script', cursive;
+      font-family: $cursivefont, cursive;
       animation: designAnim 5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
       animation-iteration-count: infinite;
       transform-origin: 50% 50%;
@@ -389,10 +396,10 @@ $namebordercolor:white;
 }
 
 .aboutme {
-  padding-top: 4rem;
+  padding-top: 6rem;
   .content {
     font-weight: $glightfontweight;
-    font-family: 'Droid Serif', serif;
+    font-family: $contentfont, serif;
     color: #484848;
   }
 }
@@ -402,11 +409,12 @@ $hrheight:9px;
 .header {
   margin: 0rem auto;
   text-align: center;
-  font-family: 'Pacifico', cursive;
+  font-family: $cursivefont, cursive;
+  color: #565656;
   &+hr {
     position: relative;
-    margin: 1rem auto 2rem;
-    width: 7rem;
+    margin: 1rem auto 4rem;
+    width: 6rem;
     height: $hrheight;
     border: 0px;
     background-color: #03A9F4;
@@ -418,9 +426,8 @@ $hrheight:9px;
       $circledimens);
       transform-origin: center center;
       background-color: inherit;
-      border-radius: 10px;
-      transform: translate( calc(3.5rem - #{$circledimens/2}),
-      -4px);
+      border-radius: 20px;
+      transform: translate( calc(3rem - #{$circledimens/2}),-4.5px);
     }
   }
 }
