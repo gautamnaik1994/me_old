@@ -2,8 +2,7 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Slabo+27px|Pacifico');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Slabo+27px|Pacifico|Nunito:400,600,700');
 @include foundation-global-styles;
 //@include foundation-grid;
 @include foundation-flex-grid;
@@ -71,13 +70,10 @@
 //         position: relative;
 //     }
 // }
+$primarycolor:#03A9F4;
 $glightfontweight:300;
 $cursivefont:'Pacifico';
 $contentfont:'Slabo 27px';
-
-
-
-
 body {
   height: 2000px;
 }
@@ -199,7 +195,7 @@ $namebordercolor:white;
   }
   .desig {
     // border-right: 1px solid $namebordercolor;
-    background-color: #03a9f4;
+    background-color: $primarycolor;
     h5 {
       font-family: $cursivefont, cursive;
       animation: designAnim 5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
@@ -396,7 +392,7 @@ $namebordercolor:white;
 }
 
 .aboutme {
-  padding-top: 6rem;
+  padding: 6rem 0 4rem;
   .content {
     font-weight: $glightfontweight;
     font-family: $contentfont, serif;
@@ -410,25 +406,24 @@ $hrheight:9px;
   margin: 0rem auto;
   text-align: center;
   font-family: $cursivefont, cursive;
-  color: #565656;
+  color: lighten(black, 50%);
   &+hr {
     position: relative;
     margin: 1rem auto 4rem;
     width: 6rem;
     height: $hrheight;
     border: 0px;
-    background-color: #03A9F4;
-    border-radius: 10px;
-    &:after {
-      content: '';
-      position: absolute; // @include posattribs(0,50%,0,50%);
-      @include widthheight($circledimens,
-      $circledimens);
-      transform-origin: center center;
-      background-color: inherit;
-      border-radius: 20px;
-      transform: translate( calc(3rem - #{$circledimens/2}),-4.5px);
-    }
+    background-color: $primarycolor;
+    border-radius: 10px; // &:after,::after {
+    //   content: '';
+    //   position: absolute; // @include posattribs(0,50%,0,50%);
+    //   @include widthheight($circledimens,
+    //   $circledimens);
+    //   transform-origin: center center;
+    //   background-color: inherit;
+    //   border-radius: 20px;
+    //   transform: translate( calc(3rem - #{$circledimens/2}),-4.5px);
+    // }
   }
 }
 
@@ -438,10 +433,28 @@ $hrheight:9px;
   letter-spacing: 1px;
   border-radius: 5px;
   padding: 0.9rem 2rem;
-  transition: all 0.2s ease-in;
-  background-color: #03a9f4;
+  transition: all 0.2s ease-in; // background-color: #03a9f4;
   &:hover {
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.63);
-    background-color: darken(#03a9f4, 5);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.63); // background-color: darken(#03a9f4, 5);
+  }
+  &:visited,
+  :focus {
+    //background-color: #03a9f4;
+  }
+}
+
+.whatido {
+  text-align: center;
+  padding: 2rem 0;
+  img {
+    height: 100px;
+  }
+  .tit {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    margin-top: 2rem;
+  }
+  &:hover {
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.08);
   }
 }
